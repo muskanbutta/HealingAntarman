@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neelu The Soul Healer</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <style>
     /* General Styles */
     body {
@@ -15,11 +16,13 @@
     }
 
     header {
-      background: url('path_to_hero_image.jpg') no-repeat center center/cover;
-      padding: 4rem 2rem;
-      text-align: center;
-      color: white;
-      box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        text-align: center;
+        color: hsl(35.45deg 50% 34.51%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
     header h1 {
@@ -41,6 +44,8 @@
       border-radius: 5px;
       font-weight: bold;
       font-size: 1.1rem;
+      margin-left: 54px;
+      margin-bottom: 16px;
     }
 
     .cta-button:hover {
@@ -100,7 +105,6 @@
       position: relative;
       overflow: hidden;
       max-width: 100%;
-      margin: 2rem 0;
     }
 
     .slides {
@@ -112,6 +116,7 @@
       width: 100%;
       border-radius: 10px;
       min-width: 1263px;
+      max-height: 500px;
     }
 
     .slider-buttons {
@@ -130,6 +135,108 @@
       padding: 0.5rem 1rem;
       cursor: pointer;
       font-size: 1.5rem;
+    }
+
+    .minor-header {
+        background-color: #ff7f50;
+        width: 100%;
+        height: 40px;
+        color: #fff;
+    }
+
+    .minor-header a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .minor-inner {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        margin: 0 16px;
+        margin-bottom: 16px;
+    } 
+
+    .email-main {
+        margin-left: 10px;
+        border-left: 1px solid #fff;
+        padding-left: 10px;
+    }
+
+    .fa-phone-alt:before {
+        content: "\f879";
+        font-family: "Font Awesome 5 Free";
+    }
+
+    .fa-envelope:before {
+        content: "\f0e0";
+        font-family: "Font Awesome 5 Free";
+    }
+
+    .contact-us-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .contact-us-inner img{
+        width: 200px;
+        border: 10px solid #ff7f50;
+        border-radius: 12px;
+    }
+
+
+
+
+    #services h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #444;
+    }
+
+    #services .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #services .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #services .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    #services .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    #services .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    #services .card-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    #services .card-content p {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.5;
     }
 
     @media (max-width: 768px) {
@@ -154,17 +261,39 @@
 </head>
 <body>
   <header>
-    <h1>Neelu The Soul Healer</h1>
-    <p>Heal Your Mind, Body, and Soul</p>
+    <div class="minor-header">
+        <div class="minor-inner">
+            <div class="">
+                <a href="tel:9711114527">
+                    <span class="elementor-icon-list-icon">
+                        <i aria-hidden="true" class="fas fa-phone-alt"></i>						
+                    </span>
+                    <span class="elementor-icon-list-text">+91- 9711114527</span>
+                </a>
+            </div>
+            <div class="email-main">
+                <a href="mailto:Neelu@thesoulhealer.com">
+                    <span class="elementor-icon-list-icon">
+                        <i aria-hidden="true" class="fas fa-envelope"></i>						
+                    </span>
+                    <span class="elementor-icon-list-text">Neelu@thesoulhealer.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <img src="img19.png" alt="logo">
     <a href="#contact" class="cta-button">Book a Session</a>
   </header>
 
   <!-- Image Slider -->
   <div class="slider">
     <div class="slides">
-      <img src="image1.jpg" alt="Healing Image 1">
+      <img src="img2.jpg" alt="Healing Image 1">
       <img src="image2.jpg" alt="Healing Image 2">
-      <img src="image3.jpg" alt="Healing Image 3">
+      <img src="img6.jpg" alt="Healing Image 3">
+      <img src="img12.jpg" alt="Healing Image 3">
+      <img src="img14.jpg" alt="Healing Image 3">
+      <img src="img17.jpg" alt="Healing Image 3">
     </div>
     <div class="slider-buttons">
       <button class="slider-button" id="prev">&#10094;</button>
@@ -174,13 +303,50 @@
 
   <section id="services">
     <h2>Our Healing Modalities</h2>
-    <ul>
-      <li><strong>Reiki Healing:</strong> Traditional Reiki healing modality.</li>
-      <li><strong>Karuna Reiki:</strong> Advanced Reiki for emotional healing.</li>
-      <li><strong>Angels Healing:</strong> Connect with angels for guidance.</li>
-      <li><strong>Lama Fera Healing:</strong> Healing for mind, body, and spirit.</li>
-      <li><strong>Money Magnet Reiki:</strong> Attract prosperity and abundance.</li>
-    </ul>
+    <div class="cards-container">
+      <div class="card">
+        <img src="img12.jpg" alt="Reiki Healing">
+        <div class="card-content">
+          <h3>Reiki Healing</h3>
+          <p>Traditional Reiki healing modality.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img3.jpg" alt="Karuna Reiki">
+        <div class="card-content">
+          <h3>Karuna Reiki</h3>
+          <p>Advanced Reiki for emotional healing.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img17.jpg" alt="Angels Healing">
+        <div class="card-content">
+          <h3>Angels Healing</h3>
+          <p>Connect with angels for guidance.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image2.jpg" alt="Lama Fera Healing">
+        <div class="card-content">
+          <h3>Lama Fera Healing</h3>
+          <p>Healing for mind, body, and spirit.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img9.jpg" alt="Money Magnet Reiki">
+        <div class="card-content">
+          <h3>Money Magnet Reiki</h3>
+          <p>Attract prosperity and abundance.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img16.jpg" alt="Reiki Healing for Pets">
+        <div class="card-content">
+          <h3>Reiki Healing for Pets</h3>
+          <p>Gentle and effective Reiki healing sessions for your beloved pets.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="benefits">
@@ -195,22 +361,47 @@
 
   <section id="testimonials">
     <h2>Client Reviews</h2>
+    
     <blockquote>
-      <p>"Recently, I've enrolled in aura cleansing sessions, and it was life-changing. Thank you, Neelu Ji!"</p>
+      <p>"A healer with the grace of God becomes so effective like you, Neelu Ji. Keep the good work on and keep healing. The world needs to be healed with so much suffering. Thanks. All the best. Love you! 👍"</p>
+      <cite>- Nandni Gupta</cite>
+    </blockquote>
+    
+    <blockquote>
+      <p>"Recently, I've enrolled myself in aura cleansing sessions from Nilu Ji, and it was a life-changing experience for me. These sessions helped me deal with the stress. I felt so much lighter and free from negative energy. I have found a new version of myself after these sessions. Thank you so much, Nilu Ji! You are my guardian 😇."</p>
       <cite>- Parul Jain</cite>
     </blockquote>
+    
     <blockquote>
-      <p>"Neelu's divine healing helped me recover quickly after an accident. Forever grateful!"</p>
+      <p>"Nirlep is residing in Delhi, India, and myself in California, USA. Nirlep helped me various times in my life through her gentle yet strong healing powers. For instance, my 9-year-old daughter had a sudden high fever during COVID times. Nirlep’s healing brought the fever from 104°F to 99°F overnight. This really amazed me and left me speechless.  
+      I had an accident, and my coccyx was hurt, a tooth fractured, and my face got bruised. Nirlep’s kind and divine healing helped me recover from this very quickly. I am so very thankful to her as a person for being around and always available in times of need. Always grateful for your presence, dear Nirlep. 🙏🌸"</p>
       <cite>- Sneh Lata</cite>
     </blockquote>
+    
+    <blockquote>
+      <p>"Meine Neelu Ji se healing session liya. Mera ye experience bahot acha tha. Isse meri problem solve ho gayi. Mind relax ho jata h. Thanks Neelu Ji 🙏."</p>
+      <cite>- Reena Ji</cite>
+    </blockquote>
+    
+    <blockquote>
+      <p>"I took healing sessions from Neelu Ma'am. The sessions were good and satisfactory. It helped me heal some of my issues. 😊"</p>
+      <cite>- Karunya Sharma</cite>
+    </blockquote>
   </section>
+  
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:Neelu@thesoulhealer.com">Neelu@thesoulhealer.com</a></p>
-    <p>Phone: <a href="tel:+911234567890">+91 1234567890</a></p>
-    <p>Address: 123, Main Street, Anytown, USA</p>
-    <a href="#services" class="cta-button">Book a Session</a>
+    <div class="contact-us-inner">
+        <div>
+            <p>Email: <a href="mailto:Neelu@thesoulhealer.com">Neelu@thesoulhealer.com</a></p>
+            <p>Phone: <a href="tel:+911234567890">+91 9711114527</a></p>
+            <p>Address: 123, Main Street, Anytown, USA</p>
+            <a href="#services" class="cta-button">Book a Session</a>
+        </div>
+        <img src="imgneelu.jpg" alt="Healing Image 1"/> 
+    </div>
+    
   </section>
 
   <footer>
